@@ -1,0 +1,19 @@
+{
+  "name": "starlord",
+  "version": "1.0.0",
+  "description": "All our data needs a guardian, there is only on guardian we can rely on, starlord. He is the guardian of our galaxy.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ryan Kahn <kahn@runnable.io>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "bunyan": "^1.8.8",
+    "continuation-local-storage": "^3.2.0",
+    "dotenv": "^4.0.0",
+    "error-cat": "^3.0.0",
+    "joi": "^10.2.2",
+    "lodash": "^4.17.4",
+    "ponos": "^5.8.2"
+  }
+}

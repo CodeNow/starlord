@@ -1,0 +1,11 @@
+version: '2'
+services:
+  big-poppa-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    links:
+    environment:
+      - NODE_ENV=development
+      - APP_NAME=guard
+
