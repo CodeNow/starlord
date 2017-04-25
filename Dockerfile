@@ -1,9 +1,9 @@
 FROM node:6.1.0
 
-ADD ./package.json /guard/package.json
-WORKDIR /guard
+ADD ./package.json /starlord/package.json
+WORKDIR /starlord
 
 RUN npm install
-ADD . /guard
+ADD . /starlord
 
 CMD npm start

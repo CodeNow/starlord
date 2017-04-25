@@ -10,6 +10,6 @@ return workerServer.start()
     log.info('all components started')
   })
   .catch((error) => {
-    log.fatal({ error }, 'Guard failed to start')
+    log.fatal({ error }, 'Starlord failed to start, our galaxy is doomed')
     process.exit(1)
   })

@@ -7,5 +7,5 @@ services:
     links:
     environment:
       - NODE_ENV=development
-      - APP_NAME=guard
+      - APP_NAME=starlord
 
