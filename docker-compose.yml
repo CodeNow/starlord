@@ -1,11 +1,32 @@
 version: '2'
 services:
-  big-poppa-test:
+  starlord:
     build:
       context: .
       dockerfile: Dockerfile
     links:
+      - vault
+      - rabbit
     environment:
       - NODE_ENV=development
-      - APP_NAME=starlord
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - RABBITMQ_HOSTNAME=rabbit
+  vault:
+    image: vault:0.6.4
+    cap_add:
+      - IPC_LOCK
 
+  rabbit:
+    image: rabbitmq:3.4.3-management
+    ports:
+      - "15672:15672"
+
+  rabbitpuppy:
+    image: meltwater/rabbit-puppy:latest
+    links:
+      - rabbit
+    volumes:
+      - ./config:/config
+    command: apply -b http://rabbit:15672/ -u guest -p guest -c /config/rabbit-config.yaml -w 60
