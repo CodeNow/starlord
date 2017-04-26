@@ -18,10 +18,8 @@ describe('E2E: org.registry.password.submitted', () => {
         .then(() => vault.read(`/secret/organization/${orgId}/registry/password`))
         .catch((err) => {
           if (err.status === 404) {
-            console.log('404')
             return waitForReadFromVault()
           }
-          console.log(Object.keys(err))
           throw err
         })
     }

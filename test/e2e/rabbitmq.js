@@ -27,7 +27,7 @@ const getConnection = () => {
 module.exports = {
   publishEvent: (eventName, data) => {
     return Promise.using(getConnection(), (connection) => {
-      connection.publishEvent(eventName, data)
+      return connection.publishEvent(eventName, data)
     })
   }
 }
