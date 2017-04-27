@@ -2,7 +2,7 @@
 
 require('dotenv').config({ path: './config/.env' })
 
-const log = require('./lib/logger').child({ module: 'main' })
+const log = require('./lib/logger')
 const workerServer = require('./lib/worker')
 
 workerServer.start()

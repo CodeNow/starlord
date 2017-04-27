@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: bash -c "/wait.sh rabbit:5672 -t 30 && sleep 2 && npm start"
     links:
       - vault
       - rabbit
@@ -15,7 +16,6 @@ services:
       - RABBITMQ_HOSTNAME=rabbit
       - VAULT_ENDPOINT=http://vault:8200
       - VAULT_TOKEN=f3b7d5b3-5ebf-4474-a312-bb98e5e240c0
-
   starlord_test:
     build:
       context: .

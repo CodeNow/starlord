@@ -9,4 +9,4 @@ WORKDIR /starlord
 RUN npm install
 ADD . /starlord
 
-CMD /wait.sh rabbit:5672 -t 30 && sleep 2 && npm start
+CMD npm start
