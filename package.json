@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha test/**/*.test.js --async-only"
+    "test": "npm run unit && npm run e2e",
+    "unit": "mocha test/e2e --recursive --async-only",
+    "e2e": "mocha test/unit --recursive --async-only"
   },
   "author": "Ryan Kahn <kahn@runnable.io>",
   "license": "UNLICENSED",

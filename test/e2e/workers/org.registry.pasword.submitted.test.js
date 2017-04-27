@@ -4,8 +4,8 @@ require('dotenv').config({ path: './config/.env' })
 
 const expect = require('chai').expect
 const Promise = require('bluebird')
-const rabbitmq = require('../rabbitmq')
-const vault = require('../vault')
+const rabbitmq = require('../../helpers/rabbitmq')
+const vault = require('../../helpers/vault')
 
 require('sinon-as-promised')(Promise)
 
