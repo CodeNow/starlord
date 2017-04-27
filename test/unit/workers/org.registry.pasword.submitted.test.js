@@ -22,12 +22,12 @@ describe('Unit: org.registry.password.submitted', () => {
   })
   it('should submit password to vault', () => {
     return worker.task({
-      orgId: orgId,
-      password: password
+      orgId,
+      password
     })
       .then(() => {
         sinon.assert.calledOnce(vault.secure)
-        sinon.assert.calledWith(vault.secure, orgId, 'registry/password', password)
+        sinon.assert.calledWithExactly(vault.secure, orgId, 'registry/password', password)
       })
   })
 })

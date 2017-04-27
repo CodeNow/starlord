@@ -25,7 +25,7 @@ describe('Unit: vault', () => {
       return vault.secure(orgId, key, password)
         .then(() => {
           sinon.assert.calledOnce(vault._vault.write)
-          sinon.assert.calledWith(
+          sinon.assert.calledWithExactly(
             vault._vault.write,
             `secret/organization/${orgId}/${key}`,
             { value: password, lease: '1d' })
