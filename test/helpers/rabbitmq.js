@@ -1,6 +1,5 @@
 const Publisher = require('ponos/lib/rabbitmq')
 const log = require('../../lib/logger').child({ module: 'e2e-tests' })
-const joi = require('joi')
 const Promise = require('bluebird')
 
 const getConnection = () => {

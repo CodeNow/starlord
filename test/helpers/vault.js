@@ -1,4 +1,4 @@
-const Vault = require("node-vault")
+const Vault = require('node-vault')
 
 module.exports = Vault({
   apiVersion: 'v1',
