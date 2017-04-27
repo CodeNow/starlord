@@ -1,0 +1,3 @@
+exchanges:
+    org.registry.password.submitted@/:
+        type: fanout

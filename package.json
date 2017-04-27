@@ -1,0 +1,47 @@
+{
+  "name": "starlord",
+  "version": "1.0.0",
+  "description": "All our data needs a guardian, there is only one guardian we can rely on, starlord. He is the guardian of our galaxy.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run lint && npm run unit && npm run e2e",
+    "lint": "node_modules/.bin/standard",
+    "unit": "mocha test/e2e --recursive --async-only",
+    "e2e": "mocha test/unit --recursive --async-only"
+  },
+  "engines": {
+    "node": "6.10.2",
+    "npm": "3.10.10"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "after",
+      "beforeEach",
+      "afterEach"
+    ]
+  },
+  "author": "Ryan Kahn <kahn@runnable.io>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "bunyan": "^1.8.8",
+    "continuation-local-storage": "^3.2.0",
+    "dotenv": "^4.0.0",
+    "error-cat": "^3.0.0",
+    "joi": "^9.0.4",
+    "lodash": "^4.17.4",
+    "node-vault": "^0.5.6",
+    "ponos": "^5.8.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7",
+    "sinon-as-promised": "^4.0.2",
+    "standard": "^10.0.2"
+  }
+}
