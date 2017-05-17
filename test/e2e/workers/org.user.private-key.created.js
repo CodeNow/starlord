@@ -7,8 +7,6 @@ const Promise = require('bluebird')
 const rabbitmq = require('../../helpers/rabbitmq')
 const vault = require('../../helpers/vault')
 
-require('sinon-as-promised')(Promise)
-
 describe('E2E: org.user.private-key.created', () => {
   const orgId = Math.floor(Math.random() * 100000)
   const userId = Math.floor(Math.random() * 100000)
