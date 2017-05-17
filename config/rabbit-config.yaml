@@ -1,3 +1,5 @@
 exchanges:
     org.registry.password.submitted@/:
         type: fanout
+    org.user.private-key.created@/:
+        type: fanout
