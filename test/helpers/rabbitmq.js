@@ -12,7 +12,10 @@ const getConnection = () => {
     password: process.env.RABBITMQ_PASSWORD,
     events: [{
       name: 'org.registry.password.submitted',
-      jobSchema: require('../../lib/workers/org.registry.password.submitted.js').jobSchema
+      jobSchema: require('../../lib/workers/org.registry.password.submitted').jobSchema
+    }, {
+      name: 'org.user.private-key.created',
+      jobSchema: require('../../lib/workers/org.user.private-key.created').jobSchema
     }]
   })
 

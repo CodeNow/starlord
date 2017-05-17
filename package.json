@@ -7,8 +7,8 @@
     "start": "node index.js",
     "test": "npm run lint && npm run unit && npm run e2e",
     "lint": "node_modules/.bin/standard",
-    "unit": "mocha test/e2e --recursive --async-only",
-    "e2e": "mocha test/unit --recursive --async-only"
+    "unit": "mocha test/unit --recursive --async-only",
+    "e2e": "mocha test/e2e --recursive --async-only"
   },
   "engines": {
     "node": "6.10.2",
@@ -40,8 +40,12 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
+    "pre-commit": "^1.2.2",
     "sinon": "^1.17.7",
     "sinon-as-promised": "^4.0.2",
     "standard": "^10.0.2"
-  }
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

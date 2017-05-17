@@ -7,8 +7,6 @@ const Promise = require('bluebird')
 const rabbitmq = require('../../helpers/rabbitmq')
 const vault = require('../../helpers/vault')
 
-require('sinon-as-promised')(Promise)
-
 describe('E2E: org.registry.password.submitted', () => {
   const orgId = `testOrg` + Math.floor(Math.random() * 100000)
   const password = `password` + Math.floor(Math.random() * 100000)
