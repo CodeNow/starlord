@@ -10,7 +10,7 @@ const worker = require('../../../lib/workers/org.registry.password.submitted')
 require('sinon-as-promised')(Promise)
 
 describe('Unit: org.registry.password.submitted', () => {
-  const orgId = `testOrg` + Math.floor(Math.random() * 100000)
+  const orgId = Math.floor(Math.random() * 100000)
   const password = `password` + Math.floor(Math.random() * 100000)
   beforeEach((done) => {
     sinon.stub(vault, 'secure').resolves()
@@ -27,7 +27,7 @@ describe('Unit: org.registry.password.submitted', () => {
     })
       .then(() => {
         sinon.assert.calledOnce(vault.secure)
-        sinon.assert.calledWithExactly(vault.secure, orgId, 'registry/password', password)
+        sinon.assert.calledWithExactly(vault.secure, String(orgId), 'registry/password', password)
       })
   })
 })

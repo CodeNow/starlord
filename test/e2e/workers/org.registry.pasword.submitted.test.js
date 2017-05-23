@@ -8,7 +8,7 @@ const rabbitmq = require('../../helpers/rabbitmq')
 const vault = require('../../helpers/vault')
 
 describe('E2E: org.registry.password.submitted', () => {
-  const orgId = `testOrg` + Math.floor(Math.random() * 100000)
+  const orgId = Math.floor(Math.random() * 100000)
   const password = `password` + Math.floor(Math.random() * 100000)
   it('should submit password to vault', () => {
     const waitForReadFromVault = () => {
