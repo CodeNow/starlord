@@ -1,6 +1,6 @@
 {
   "name": "starlord",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "All our data needs a guardian, there is only one guardian we can rely on, starlord. He is the guardian of our galaxy.",
   "main": "index.js",
   "scripts": {
